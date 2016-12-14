@@ -1,23 +1,40 @@
-create a folder
-create folder js
-create folder server
-create folder client
-create folder nodes_modules
-create client/index.html empty
-create app.js empty
-install nodes : sudo get-install nodejs legacy-apt
-install npm : sudo apt install npm
-create the projet : npm init
-install express : npm install express
-install socket.io : npm install socket.io
-install mongodb : sudo apt install mongodb-server
+To make this work :
+
+create this folders :
+
+project
+  -js
+  -server
+  -client
+  -nodes_modules
+
+INSTALL NODES
+sudo get-install nodejs legacy-apt
+
+INSTALL NPM
+sudo apt install npm
+
+CREATE PROJECT
+npm init
+
+INSTALL EXPRESS
+npm install express
+
+INSTALL SOCKET.IO
+npm install socket.io
+
+INSTALL MONGODB
+sudo apt install mongodb-server
 create folder data/db
-start mongo : mongod --dbpath data --port 2001
-entrer dans mongo : mongo
-créer la bd mygame : use mygame
-créer collections : db.createCollection('account');
-créer collections : db.createCollection('progress');
-créer user : db.account.insert({username:'bob', password:'bob'});
-install mongojs : npm install mongojs
 
+ABOUT THE DATABASE
+start mongo service: mongod --dbpath data --port 2001
 
+TO MANUALLY USE MONGO
+mongo
+to create a databse : 'use mygame'
+to create a table/collection : db.createCollection('account');
+to do an insert : db.account.insert({username:'bob', password:'bob'});
+
+TO USE MONGO IN THE GAME, WE NEED TO INSTALL MONGOJS :
+npm install mongojs
